@@ -39,6 +39,7 @@ This project uses NLP preprocessing and a Naive Bayes model to classify messages
 
 ## Project Structure
 
+```
 Spam Email Checker/
 │
 ├── data/
@@ -48,23 +49,23 @@ Spam Email Checker/
 ├── tfidf.pkl
 ├── requirements.txt
 └── README.md
-
----
-
+```
 ---
 
 ## How to Run Locally
 
 1. Clone the repository
-
+```
 git clone https://github.com/yourusername/spam-classifier.git
-
+```
 2. Install Dependencies
-   pip install -r requirements.txt
-
+```
+pip install -r requirements.txt
+```
 3. Run the App
+```
    streamlit run app.py
-
+```
 ---
 
 ## Example
