@@ -3,6 +3,7 @@ import pickle
 import nltk
 import string
 from nltk.corpus import stopwords
+nltk.download('stopwords')
 
 # Load model & vectorizer
 with open('model.pkl', 'rb') as f:
