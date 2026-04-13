@@ -39,6 +39,7 @@ This project uses NLP preprocessing and a Naive Bayes model to classify messages
 
 ## Project Structure
 
+```
 Spam Email Checker/
 │
 ├── data/
@@ -48,7 +49,7 @@ Spam Email Checker/
 ├── tfidf.pkl
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 ---
