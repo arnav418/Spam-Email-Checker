@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 try:
     stopwords.words('english')
 except LookupError:
-    nltk.download('stopwords')
+    nltk.download('stopwords', quiet=True)
 
 # Load model & vectorizer
 with open('model.pkl', 'rb') as f:
@@ -17,13 +17,15 @@ with open('model.pkl', 'rb') as f:
 with open('tfidf.pkl', 'rb') as f:
     tfidf = pickle.load(f)
 
+# Cache stopwords (performance + stability)
+STOP_WORDS = set(stopwords.words('english'))
+
 # Preprocessing function
 def preprocess_text(text):
     text = text.lower()
     text = ''.join([char for char in text if char not in string.punctuation])
     words = text.split()
-    stop_words = set(stopwords.words('english'))
-    words = [word for word in words if word not in stop_words]
+    words = [word for word in words if word not in STOP_WORDS]
     return ' '.join(words)
 
 # Page config
